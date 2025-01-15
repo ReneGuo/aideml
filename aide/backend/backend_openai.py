@@ -58,8 +58,9 @@ def query(
     )
     req_time = time.time() - t0
 
+    print("model completion: ", completion)
     choice = completion.choices[0]
-
+    
     if func_spec is None:
         output = choice.message.content
     else:
